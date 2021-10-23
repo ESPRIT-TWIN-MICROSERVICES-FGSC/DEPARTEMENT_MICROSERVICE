@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>esprit.fgsc</groupId>
-	<artifactId>EMPLOYEES-MICROSERVICES</artifactId>
+	<artifactId>DEPARTEMENT-MICROSERVICES</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>EMPLOYEES-MICROSERVICES</name>
 	<description>EMPLOYEES-MICROSERVICES</description>

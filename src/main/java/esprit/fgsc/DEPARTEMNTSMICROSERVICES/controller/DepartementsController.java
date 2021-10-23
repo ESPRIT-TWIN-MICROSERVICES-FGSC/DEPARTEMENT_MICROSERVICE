@@ -1,4 +1,4 @@
-package esprit.fgsc.EMPLOYEESMICROSERVICES.controller;
+package esprit.fgsc.DEPARTEMNTSMICROSERVICES.controller;
 
 import java.util.List;
 
@@ -17,38 +17,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import esprit.fgsc.EMPLOYEESMICROSERVICES.entities.Employee;
-import esprit.fgsc.EMPLOYEESMICROSERVICES.services.EmployeService;
+import esprit.fgsc.DEPARTEMNTSMICROSERVICES.entities.Departement;
+import esprit.fgsc.DEPARTEMNTSMICROSERVICES.services.DepartementService;
 
 
 @CrossOrigin(origins = "*")
 @RestController
-public class EmployeeController {
+public class DepartementsController {
 
 	@Autowired
-	private  EmployeService employeService;
+	private  DepartementService DepartementService;
 	@PostMapping("/add")
 	@ResponseStatus(HttpStatus.CREATED)
-	public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
-		return new ResponseEntity<>(employeService.addEmployee(employee), HttpStatus.OK);
+	public ResponseEntity<Departement> createEmployee(@RequestBody Departement departement) {
+		return new ResponseEntity<>(DepartementService.addDepartement(departement), HttpStatus.OK);
 	}
 	
-	@GetMapping("/employees")
+	
+	@GetMapping("/departements")
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<List<Employee> >getAllEmployees(){
-		 return new ResponseEntity<>(employeService.getAllEmployees(),HttpStatus.OK);
+	public ResponseEntity<List<Departement> >getAllEmployees(){
+		 return new ResponseEntity<>(DepartementService.getAllDepartement(),HttpStatus.OK);
 	}
-	
 	@DeleteMapping("/delete/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	public String deleteEmployee(@PathVariable String id) {
-	    return employeService.deleteEmployee(id);
+	public String deleteDepartements(@PathVariable String id) {
+	    return DepartementService.deleteDepartement(id);
 	}
 
 	@PutMapping(value="/update/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<Employee> updateEmployee(@PathVariable("id") String id,@Valid @RequestBody Employee employee) {
-		return new ResponseEntity<>(employeService.updateEmployee(id, employee),HttpStatus.OK);
+	public ResponseEntity<Departement>deleteDepartement(@PathVariable("id") String id,@Valid @RequestBody Departement departement) {
+		return new ResponseEntity<>(DepartementService.updateDepartement(id, departement),HttpStatus.OK);
 	}
 	
 

@@ -1,13 +1,14 @@
 server:
-  port: ${PORT:5050}
+  port: ${PORT:8070}
 spring:
   application:
-    name: employees
+    name: sadek
 eureka:
   client:
     fetch-registry: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:5000/eureka} #      http://user:password@url/eureka
+      defaultZone: ${EUREKA_URL:http://localhost:5000/eureka}
+#      http://user:password@url/eureka
 security:
   user:
     password: ${eureka.password}
@@ -18,5 +19,8 @@ eureka:
     nonSecurePort: 80
     prefer-ip-address: true
     app-group-name: fgsc
-    appname: employees
+    appname: sadek
   password: ${USER_PASSWORD:password}
+#security:
+#  user:
+#    password: ${eureka.password}

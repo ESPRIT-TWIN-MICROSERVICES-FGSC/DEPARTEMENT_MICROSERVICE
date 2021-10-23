@@ -1,4 +1,4 @@
-package esprit.fgsc.EMPLOYEESMICROSERVICES;
+package esprit.fgsc.DEPARTEMNTSMICROSERVICES;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class EmployeesMicroservicesApplication {
+public class DepartementsMicroservicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeesMicroservicesApplication.class, args);
+		SpringApplication.run(DepartementsMicroservicesApplication.class, args);
 	}
 
 }
